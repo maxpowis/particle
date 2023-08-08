@@ -61,9 +61,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=10.0.0":
-  version "20.4.8"
-  resolved "https://registry.npmjs.org/@types/node/-/node-20.4.8.tgz"
-  integrity sha512-0mHckf6D2DiIAzh8fM8f3HQCvMKDpK94YQ0DSVkfWTG9BZleYIWudw9cJxX8oCk9bM+vAkDyujDV6dmKHbvQpg==
+  version "20.4.9"
+  resolved "https://registry.npmjs.org/@types/node/-/node-20.4.9.tgz"
+  integrity sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==
 
 accepts@~1.3.4:
   version "1.3.8"
@@ -946,27 +946,12 @@ css-tree@^1.1.2, css-tree@^1.1.3:
     mdn-data "2.0.14"
     source-map "^0.6.1"
 
-css-tree@1.0.0-alpha.29:
-  version "1.0.0-alpha.29"
-  resolved "https://registry.npmjs.org/css-tree/-/css-tree-1.0.0-alpha.29.tgz"
-  integrity sha512-sRNb1XydwkW9IOci6iB2xmy8IGCj6r/fr+JWitvJ2JxQRPzN3T4AGGVWCMlVmVwM1gtgALJRmGIlWv5ppnGGkg==
-  dependencies:
-    mdn-data "~1.1.0"
-    source-map "^0.5.3"
-
 css-what@^6.0.1:
   version "6.1.0"
   resolved "https://registry.npmjs.org/css-what/-/css-what-6.1.0.tgz"
   integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
 
-csso@^3.0.0:
-  version "3.5.1"
-  resolved "https://registry.npmjs.org/csso/-/csso-3.5.1.tgz"
-  integrity sha512-vrqULLffYU1Q2tLdJvaCYbONStnfkfimRxXNaGjxMldI0C7JPBC4rB1RyjhfdZ4m1frm8pM9uRPKH3d2knZ8gg==
-  dependencies:
-    css-tree "1.0.0-alpha.29"
-
-csso@^4.2.0:
+csso@^4.0.0, csso@^4.2.0:
   version "4.2.0"
   resolved "https://registry.npmjs.org/csso/-/csso-4.2.0.tgz"
   integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
@@ -2074,13 +2059,13 @@ gulp-concat@^2.6.1:
     through2 "^2.0.0"
     vinyl "^2.0.0"
 
-gulp-csso@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/gulp-csso/-/gulp-csso-3.0.1.tgz"
-  integrity sha512-zhkvq06x1SJrpBN8YNJfc1PDono2+xjB6nI9UmBPh88nS4Weuz0hZMgJ4YruOw9Bf+oDrX71U6pkos6pIQhc1g==
+gulp-csso@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/gulp-csso/-/gulp-csso-4.0.1.tgz"
+  integrity sha512-Kg8gqmd6XcUlMTdBbqdCEcpHumc8ytc4khgm9AXeCjl8eHx7b6tC11y8haizFI+Zw/cSHL6HCj7GwGLwxxBUFQ==
   dependencies:
-    csso "^3.0.0"
-    plugin-error "^0.1.2"
+    csso "^4.0.0"
+    plugin-error "^1.0.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-imagemin@^8.0.0:
@@ -2951,11 +2936,6 @@ matchdep@^2.0.0:
     resolve "^1.4.0"
     stack-trace "0.0.10"
 
-mdn-data@~1.1.0:
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-1.1.4.tgz"
-  integrity sha512-FSYbp3lyKjyj3E7fMl6rYvUdX0FBXaluGqlFoYESWQlyUTq8R+wp0rkFxoYFqZlHCvsUXGjyJmLQSnXToYhOSA==
-
 mdn-data@2.0.14:
   version "2.0.14"
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz"
@@ -3561,7 +3541,7 @@ plugin-error@^0.1.2:
     arr-union "^2.0.1"
     extend-shallow "^1.1.2"
 
-plugin-error@^1.0.1:
+plugin-error@^1.0.0, plugin-error@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/plugin-error/-/plugin-error-1.0.1.tgz"
   integrity sha512-L1zP0dk7vGweZME2i+EeakvUNqSrdiI3F91TwEoYiGrAfUXmVv6fJIq4g82PAXxNsWOp0J7ZqQy/3Szz0ajTxA==
@@ -4185,11 +4165,6 @@ source-map-url@^0.4.0:
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
 
 source-map@^0.5.1:
-  version "0.5.7"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz"
-  integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
-
-source-map@^0.5.3:
   version "0.5.7"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz"
   integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
