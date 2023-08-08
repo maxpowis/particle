@@ -18,6 +18,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1",
     "sass": "^1.64.2"
   },
   "packageManager": "yarn@3.6.1"
