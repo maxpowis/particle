@@ -18,3 +18,15 @@ google-analytics:
   id: ""
 
 exclude: ['package.json', 'src' , 'node_modules']
+
+collections:
+  redirects:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: _redirects
+      type: redirects
+    values:
+      layout: redirect
