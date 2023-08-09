@@ -46,7 +46,7 @@ gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
 * Compile and minify sass
 */
 gulp.task('sass', function() {
-  return gulp.src('src/styles/**/*.scss')
+  return gulp.src('src/styles/**/*.{scss,css}')
     .pipe(plumber())
     .pipe(sass())
     .pipe(csso())
@@ -84,7 +84,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/styles/**/*.scss', gulp.series(['sass', 'jekyll-rebuild']));
+  gulp.watch('src/styles/**/*.{scss,css}', gulp.series(['sass', 'jekyll-rebuild']));
   gulp.watch('src/js/**/*.js', gulp.series(['js', 'jekyll-rebuild']));
   gulp.watch('src/fonts/**/*.{tff,woff,woff2}', gulp.series(['fonts']));
   gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
