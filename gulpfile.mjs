@@ -4,11 +4,11 @@ import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 import plumber from 'gulp-plumber';
 import cp from 'child_process';
+import jsonmin from 'gulp-jsonmin';
 import imagemin from 'gulp-imagemin';
 import browserSync from 'browser-sync';
 import replace from 'gulp-string-replace';
 import rename from 'gulp-rename';
-
 
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -70,6 +70,15 @@ gulp.task('fonts', function () {
 });
 
 /*
+ * Minify jsons
+ */
+gulp.task('jsonmin', function () {
+	return gulp.src('src/json/**/*.json')
+		.pipe(jsonmin())
+		.pipe(gulp.dest('assets/json/'))
+});
+
+/*
  * Minify images
  */
 gulp.task('imagemin', function () {
@@ -116,10 +125,11 @@ gulp.task('node-src', async function () {
 
 gulp.task('watch', function () {
 	gulp.watch('src/styles/**/*.{scss,css}', gulp.series(['sass', 'jekyll-rebuild']));
+	gulp.watch('src/json/**/*.json', gulp.series(['jsonmin']));
 	gulp.watch('src/js/**/*.js', gulp.series(['js', 'jekyll-rebuild']));
 	gulp.watch('src/fonts/**/*.{tff,woff,woff2}', gulp.series(['fonts']));
 	gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
 	gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
 });
 
-gulp.task('default', gulp.series(['node-src', 'js', 'sass', 'fonts', 'browser-sync', 'watch']));
+gulp.task('default', gulp.series(['node-src', 'jsonmin', 'js', 'sass', 'fonts', 'browser-sync', 'watch']));
