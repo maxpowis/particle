@@ -15,7 +15,7 @@ gplus_username:  lorem_ipsum
 
 # Google-analytics
 google-tag-manager:
-  id: ""
+  id: null
 
 exclude: ['package.json', 'src' , 'node_modules']
 
