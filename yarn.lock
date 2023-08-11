@@ -4475,6 +4475,11 @@ svgo@^2.1.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
+sweet-scroll@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/sweet-scroll/-/sweet-scroll-4.0.0.tgz"
+  integrity sha512-mR6fRsAQANtm3zpzhUE73KAOt2aT4ZsWzNSggiEsSqdO6Zh4gM7ioJG81EngrZEl0XAc3ZvzEfhxggOoEBc8jA==
+
 tar-stream@^1.5.2:
   version "1.6.2"
   resolved "https://registry.npmjs.org/tar-stream/-/tar-stream-1.6.2.tgz"

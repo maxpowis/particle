@@ -108,7 +108,9 @@ gulp.task('node-src', async function () {
 		copyFiles('node_modules/devicon/fonts/*', 'src/fonts/devicon/'),
 		gulp.src('node_modules/devicon/devicon.min.css')
 			.pipe(replace('fonts/devicon', '../fonts/devicon'))
-			.pipe(gulp.dest('src/styles/devicon/'))
+			.pipe(gulp.dest('src/styles/devicon/')),
+		copyFiles('node_modules/particles.js/particles.js', 'src/js/particle.js/'),
+		copyFiles('node_modules/sweet-scroll/sweet-scroll.min.js', 'src/js/sweet-scroll/')
 	])
 });
 
