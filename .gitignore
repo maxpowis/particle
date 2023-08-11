@@ -1,7 +1,7 @@
 _site
 .sass-cache
 node_modules
-.DS_STORE
+.DS_Store
 .yarn
 .yarnrc.yml
 package-lock.json
