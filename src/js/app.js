@@ -1,3 +1,9 @@
+function lightswitch() {
+  document.getElementsByClassName("moon")[0].classList.toggle("sun");
+  document.getElementsByClassName("lightswitch")[0].classList.toggle("day");
+  document.getElementsByTagName("body")[0].classList.toggle("light");
+}
+
 document.addEventListener(
   'DOMContentLoaded',
   () => {
