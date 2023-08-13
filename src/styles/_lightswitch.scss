@@ -8,15 +8,9 @@
 }
 
 body {
-  transition: all 0.2s ease-in-out;
-  background: var(--background-color-dark);
-  color: var(--text-color-dark);
-  text-align: center;
-}
-
-.light {
-  background: var(--background-color-light);
-  color: var(--text-color-light);
+  transition: all var(--theme-transition-time) ease-in-out;
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-600);
 }
 
 .lightswitch {
