@@ -76,11 +76,11 @@
     transition: all .7s;
     &:hover {
       color: var(--color-fooder-bg);
-      background: var(--color-fooder-tx);
+      background: var(--color-primary-teal);
     }
     &:active {
       color: var(--color-fooder-bg);
-      background: var(--color-fooder-tx);
+      background: var(--color-accent-red);
     }
     @media only screen and (min-width: $cut) {
       width: 35px;

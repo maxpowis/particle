@@ -83,17 +83,17 @@
               background-color 0.3s ease-out,
               border-color 0.3s ease-out;
   &:hover {
-    background-color: var(--color-secondary-600);
-    border-color: var(--color-secondary-600);
-    color: var(--color-neutral-200);
+    background-color: var(--color-primary-teal);
+    border-color: var(--color-primary-teal);
+    color: var(--color-primary-dark-grey);
     transition: color 0.3s ease-in,
                 background-color 0.3s ease-in,
                 border-color 0.3s ease-in;
   }
   &:active {
-    background-color: var(--color-secondary-600);
-    border-color: var(--color-secondary-600);
-    color: var(--color-neutral-200);
+    background-color: var(--color-accent-red);
+    border-color: var(--color-accent-red);
+    color: var(--color-primary-dark-grey);
     transition: color 0.3s ease-in,
                 background-color 0.3s ease-in,
                 border-color 0.3s ease-in;
