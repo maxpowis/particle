@@ -1,21 +1,22 @@
 .footer {
-  background: $main;
+  transition: all var(--theme-transition-time) ease-in-out;
+  background: var(--color-fooder-bg);
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;
-  color: #FFF;
+  color: var(--color-fooder-tx);
   .love {
     color: red;
   }
   a {
     text-decoration: none;
     margin: 0;
-    color: #FFF;
+    color: var(--color-primary-teal);
     &:hover{
-      color: $sec;
+      color: var(--color-accent-green);
     }
     &:active {
-      color: $sec;
+      color: var(--color-accent-red);
     }
   }
 }

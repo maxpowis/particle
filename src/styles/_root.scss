@@ -1,0 +1,27 @@
+$cut: 550px;
+
+:root {
+  --theme-transition-time: 0.2s;
+  $active-theme: $light-theme;
+
+  @each $color,
+  $shade in $active-theme {
+
+    @each $prop,
+    $value in $shade {
+      --color-#{$color}-#{$prop}: #{$value};
+    }
+  }
+}
+
+html[data-theme='dark'] {
+
+  @each $color,
+  $shade in $dark-theme {
+
+    @each $prop,
+    $value in $shade {
+      --color-#{$color}-#{$prop}: #{$value};
+    }
+  }
+}

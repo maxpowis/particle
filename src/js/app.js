@@ -1,3 +1,6 @@
+const themeToggle = document.querySelector('.lightswitch');
+themeToggle.addEventListener('click', lightswitch);
+
 document.addEventListener(
   'DOMContentLoaded',
   () => {
