@@ -9,8 +9,8 @@
 
 body {
   transition: all var(--theme-transition-time) ease-in-out;
-  background: var(--color-neutral-200);
-  color: var(--color-neutral-800);
+  background: var(--color-standard-bg);
+  color: var(--color-standard-text);
 }
 
 .lightswitch {

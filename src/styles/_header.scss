@@ -1,6 +1,6 @@
 #particles-js {
   transition: all var(--theme-transition-time) ease-in-out;
-  background: var(--color-fooder-bg);
+  background: var(--color-intense-bg);
   display: flex;
   vertical-align: bottom;
   width: 100%;
@@ -17,7 +17,7 @@
 .header {
   z-index: 1;
   text-align: center;
-  color: var(--color-fooder-tx);
+  color: var(--color-intense-text);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,7 +28,7 @@
     font-size: 50px;
     display: block;
     line-height: 1;
-    color: var(--color-fooder-tx);
+    color: var(--color-intense-text);
     @media only screen and (min-width: $cut) {
       margin: 0;
       font-size: 100px;
@@ -38,7 +38,7 @@
     font-size: 20px;
     display: block;
     line-height: 1;
-    color: var(--color-fooder-tx);
+    color: var(--color-intense-text);
     margin-top: 10px;
     @media only screen and (min-width: $cut) {
       font-size: 40px;
@@ -49,12 +49,20 @@
 .header-links {
   margin: 10px;
   .link {
-    color: var(--color-fooder-tx);
+    color: var(--color-intense-link-text);
     text-decoration: none;
     font-size: 15px;
     margin: 10px;
     @media only screen and (min-width: $cut) {
       font-size: 20px;
+    }
+    &:hover {
+      text-decoration-line: overline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 2px;
+    }
+    &:active {
+      color: var(--color-intense-link-active-text);
     }
   }
 }
@@ -65,22 +73,22 @@
   text-align: center;
   .icon {
     text-align: center;
-    color: var(--color-fooder-tx);
+    color: var(--color-intense-button-text);
     width: 20px;
     height: 20px;
     font-size: 20px;
     padding: 10px;
     margin: 5px;
     border-radius: 50%;
-    border: 2px solid var(--color-fooder-tx);
+    border: 2px solid var(--color-intense-button-text);
     transition: all .7s;
     &:hover {
-      color: var(--color-fooder-bg);
-      background: var(--color-primary-teal);
+      color: var(--color-intense-button-hover-text);
+      background: var(--color-intense-button-hover-bg);
     }
     &:active {
-      color: var(--color-fooder-bg);
-      background: var(--color-accent-red);
+      color: var(--color-intense-button-active-text);
+      background: var(--color-intense-button-active-bg);
     }
     @media only screen and (min-width: $cut) {
       width: 35px;
@@ -91,7 +99,7 @@
 }
 
 .down {
-  color: var(--color-fooder-tx);
+  color: var(--color-intense-text);
   position: absolute;
   bottom: 25px;
   width: 100%;
@@ -110,14 +118,14 @@
       transform: translate(-50%, -50%);
       width: 100px;
       height: 100px;
-      fill: var(--color-fooder-tx);
+      fill: var(--color-intense-button-text);
       -webkit-animation: pulse 1.3s infinite;
       animation: pulse 1.3s infinite;
       &:hover {
-        color: var(--color-neutral-700);
+        color: var(--color-intense-button-hover-bg);
       }
       &:active {
-        color: var(--color-neutral-700);
+        color: var(--color-intense-button-active-bg);
       }
   }
 }

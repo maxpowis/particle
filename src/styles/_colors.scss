@@ -1,54 +1,81 @@
 @use "sass:map";
 
 $color-palette: (
-  'primary': (
-    'black': #161721,
-    'dark-grey': #22242f,
-    'grey': #607d8b,
-    'light-grey': #90a4ae,
-    'lighter-grey': #fffff2,
-    'teal': #60fbd0,
-    'blue': #1e92e6,
-    'dark-blue': #1c6599,
-    'white': #f5fff2),
-  'accent': (
-    'red': #e53935,
-    'orange': #f57c00,
-    'green': #00c853)
+  'black': #161721,
+  'white': #fff,
+  'grey': (
+    'dark': #22242f,
+    'medium': #607d8b,
+    'light': #90a4ae
+  ),
+  'teal': (
+    'dark': #2c7a7b,
+    'medium': #60fbd0,
+    'light': #a0f7e0
+  ),
+  'blue': (
+    'dark': #1c6599,
+    'medium': #1e92e6,
+    'light': #6bbcff
+  ),
+  'yellow': (
+    'dark': #ffeb3b,
+    'medium': #ffecb3,
+    'light': #fff8e1
+  ),
+  'red': (
+    'dark': #e53935,
+    'medium': #e57373,
+    'light': #ef9a9a
+  )
 );
 
 $light-theme: (
-  'fooder': (
-    'bg': map.get(map.get($color-palette, 'primary'), 'dark-grey'),
-    'tx': map.get(map.get($color-palette, 'primary'), 'white')),
-  'primary': map.get($color-palette, 'primary'),
-  'accent': map.get($color-palette, 'accent'),
-  'neutral': (
-    '100': map.get(map.get($color-palette, 'primary'), 'white'),
-    '200': map.get(map.get($color-palette, 'primary'), 'lighter-grey'),
-    '300': map.get(map.get($color-palette, 'primary'), 'light-grey'),
-    '400': map.get(map.get($color-palette, 'primary'), 'grey'),
-    '500': map.get(map.get($color-palette, 'primary'), 'teal'),
-    '600': map.get(map.get($color-palette, 'primary'), 'blue'),
-    '700': map.get(map.get($color-palette, 'primary'), 'dark-blue'),
-    '800': map.get(map.get($color-palette, 'primary'), 'dark-grey'),
-    '900': map.get(map.get($color-palette, 'primary'), 'black'))
+  'intense': (
+    'bg': map.get(map.get($color-palette, 'yellow'), 'medium'),
+    'text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'link-text': map.get(map.get($color-palette, 'blue'), 'medium'),
+    'link-hover-text': map.get(map.get($color-palette, 'blue'), 'dark'),
+    'link-active-text': map.get(map.get($color-palette, 'red'), 'dark'),
+    'button-text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'button-hover-text': map.get($color-palette, 'white'),
+    'button-hover-bg': map.get(map.get($color-palette, 'blue'), 'dark'),
+    'button-active-bg': map.get(map.get($color-palette, 'red'), 'dark'),
+  ),
+  'standard': (
+    'bg': map.get(map.get($color-palette, 'yellow'), 'light'),
+    'text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'link-text': map.get(map.get($color-palette, 'blue'), 'medium'),
+    'link-hover-text': map.get(map.get($color-palette, 'blue'), 'dark'),
+    'link-active-text': map.get(map.get($color-palette, 'red'), 'dark'),
+    'button-text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'button-hover-text': map.get($color-palette, 'white'),
+    'button-hover-bg': map.get(map.get($color-palette, 'blue'), 'light'),
+    'button-active-bg': map.get(map.get($color-palette, 'red'), 'light'),
+  )
 );
 
 $dark-theme: (
-  'fooder': (
-    'bg': map.get(map.get($color-palette, 'primary'), 'black'),
-    'tx': map.get(map.get($color-palette, 'primary'), 'lighter-grey')),
-  'primary': map.get($color-palette, 'primary'),
-  'accent': map.get($color-palette, 'accent'),
-  'neutral': (
-    '900': map.get(map.get($color-palette, 'primary'), 'white'),
-    '800': map.get(map.get($color-palette, 'primary'), 'lighter-grey'),
-    '700': map.get(map.get($color-palette, 'primary'), 'light-grey'),
-    '600': map.get(map.get($color-palette, 'primary'), 'grey'),
-    '500': map.get(map.get($color-palette, 'primary'), 'teal'),
-    '400': map.get(map.get($color-palette, 'primary'), 'blue'),
-    '300': map.get(map.get($color-palette, 'primary'), 'dark-blue'),
-    '200': map.get(map.get($color-palette, 'primary'), 'dark-grey'),
-    '100': map.get(map.get($color-palette, 'primary'), 'black'))
+  'intense': (
+    'bg': map.get($color-palette, 'black'),
+    'text': map.get($color-palette, 'white'),
+    'link-text': map.get(map.get($color-palette, 'teal'), 'medium'),
+    'link-hover-text': map.get(map.get($color-palette, 'teal'), 'light'),
+    'link-active-text': map.get(map.get($color-palette, 'red'), 'medium'),
+    'button-text': map.get($color-palette, 'white'),
+    'button-hover-text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'button-hover-bg': map.get(map.get($color-palette, 'teal'), 'medium'),
+    'button-active-bg': map.get(map.get($color-palette, 'red'), 'dark'),
+  ),
+  'standard': (
+    'bg': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'text': map.get($color-palette, 'white'),
+    'link-text': map.get(map.get($color-palette, 'teal'), 'medium'),
+    'link-hover-text': map.get(map.get($color-palette, 'blue'), 'medium'),
+    'link-active-text': map.get(map.get($color-palette, 'red'), 'medium'),
+    'button-text': map.get($color-palette, 'white'),
+    'button-hover-text': map.get(map.get($color-palette, 'grey'), 'dark'),
+    'button-hover-bg': map.get(map.get($color-palette, 'teal'), 'medium'),
+    'button-active-bg': map.get(map.get($color-palette, 'red'), 'dark'),
+  )
 );
